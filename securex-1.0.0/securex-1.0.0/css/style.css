@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
-    /* --primary: #82c2d9; */
-    --primary: #37a3ce;
+    --primary: #82c2d9;
+    --primary-hover: #6eb5c4;
     --secondary: #9B9B9B;
     --light: #F5F5F5;
     --dark: #161616;
@@ -178,8 +178,25 @@
     }
 
     .header-carousel .owl-carousel-item h1 {
-        font-size: 30px;
+        font-size: 24px;
         font-weight: 600;
+        line-height: 1.2;
+        word-break: keep-all;
+    }
+
+    .header-carousel .owl-carousel-item p {
+        font-size: 12px !important;
+        line-height: 1.5;
+        word-break: keep-all;
+    }
+
+    .header-carousel .owl-carousel-item br {
+        display: none;
+    }
+
+    .header-carousel .owl-carousel-item .btn {
+        padding: 0.65rem 1.1rem !important;
+        font-size: 0.95rem !important;
     }
 }
 
@@ -255,7 +272,7 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(22, 22, 22, .7), rgba(22, 22, 22, .7)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(22, 22, 22, .7), rgba(22, 22, 22, .7)), url(../img/Eden_background.png) center center no-repeat;
     background-size: cover;
 }
 
@@ -279,6 +296,51 @@
     .about-text  {
         padding-right: calc(((100% - 1140px) / 2) + .75rem);
     }
+
+    .about-heading {
+        max-width: 12ch;
+        line-height: 1.12;
+        text-wrap: balance;
+    }
+
+    .about-heading-line {
+        display: inline;
+    }
+
+    .about-description {
+        max-width: 56ch;
+        line-height: 1.8;
+        word-break: keep-all;
+        text-wrap: balance;
+    }
+
+    @media (max-width: 767.98px) {
+        .about-description {
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .about-heading {
+        max-width: 100%;
+        line-height: 1.18;
+        text-wrap: balance;
+        word-break: keep-all;
+        font-size: clamp(2.2rem, 4.2vw, 3.5rem);
+    }
+
+    .about-heading-line {
+        display: inline;
+    }
+
+    .about-description {
+        max-width: 100%;
+        line-height: 1.7;
+        word-break: keep-all;
+        text-wrap: balance;
+    }
 }
 
 @media (min-width: 1400px) {
@@ -295,6 +357,14 @@
 
 .service-item {
     border-color: rgba(0, 0, 0, .03) !important;
+}
+
+.service-item h4,
+.service-item p {
+    word-break: keep-all;
+    overflow-wrap: normal;
+    line-height: 1.5;
+    text-wrap: balance;
 }
 
 .service-item .btn {
@@ -541,6 +611,10 @@
 
 
 /*** Footer ***/
+.footer .row {
+    justify-content: center;
+}
+
 .footer .btn.btn-link {
     display: block;
     margin-bottom: 5px;
